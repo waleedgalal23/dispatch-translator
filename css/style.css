@@ -1,3 +1,4 @@
+/* تنسيق الصفحة العامة */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -6,8 +7,9 @@ body {
     margin: 0;
 }
 
+/* الحاوية الرئيسية */
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     background: white;
     border-radius: 20px;
@@ -15,17 +17,224 @@ body {
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
 }
 
+/* العنوان */
 h1 {
     color: #667eea;
     text-align: center;
     font-size: 2.5em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-p {
-    color: #333;
-    font-size: 1.2em;
-    line-height: 1.8;
+.subtitle {
     text-align: center;
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* اختيار اللغة */
+.language-selector {
+    background: #f3f4f6;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.language-selector label {
+    font-weight: bold;
+    color: #333;
+}
+
+.language-selector select {
+    padding: 10px;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    font-size: 1em;
+    background: white;
+    cursor: pointer;
+}
+
+/* أزرار التحكم */
+.controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-danger {
+    background: #ef4444;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+}
+
+.btn-small {
+    padding: 10px 20px;
+    font-size: 0.9em;
+    background: #10b981;
+    color: white;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* أقسام النص */
+.text-section {
+    margin-bottom: 25px;
+}
+
+.text-section h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.text-box {
+    background: #f9fafb;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 100px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* اقتراحات الردود */
+.suggestions-section {
+    margin-bottom: 25px;
+}
+
+.suggestions-section h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.suggestions-box {
+    background: #fef3c7;
+    border: 2px solid #f59e0b;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 80px;
+}
+
+.suggestion-item {
+    background: white;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border-right: 4px solid #f59e0b;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.suggestion-item:hover {
+    background: #fef3c7;
+    transform: translateX(-5px);
+}
+
+/* سجل المكالمات */
+.history-section {
+    margin-bottom: 25px;
+}
+
+.history-section h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.history-box {
+    background: #f3f4f6;
+    border: 2px solid #d1d5db;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 100px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.history-item {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-right: 4px solid #667eea;
+}
+
+/* إعدادات API */
+.api-section {
+    background: #e0f2fe;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #0ea5e9;
+}
+
+.api-section h3 {
+    color: #075985;
     margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #075985;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #0ea5e9;
+    border-radius: 8px;
+    font-size: 1em;
+    min-width: 200px;
+}
+
+.status-text {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+/* رسالة فارغة */
+.empty-message {
+    color: #9ca3af;
+    text-align: center;
+    font-style: italic;
 }
